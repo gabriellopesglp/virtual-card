@@ -140,6 +140,10 @@ body.dark-mode .main-content .contact {
   border-bottom: 1px solid #1c1c1e;
 }
 
+body.dark-mode .main-content .contact:last-of-type {
+  border-bottom: none;
+}
+
 .toggle {
   position: absolute;
   top: 16px;
