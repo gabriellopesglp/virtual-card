@@ -11,7 +11,10 @@ function updateThemeColor() {
     metaThemeColor.name = "theme-color";
     document.head.appendChild(metaThemeColor);
   }
-  metaThemeColor.content = themeColor;
+
+  setTimeout(() => {
+    metaThemeColor.content = themeColor;
+  }, 300);
 }
 
 checkbox.addEventListener("change", () => {
