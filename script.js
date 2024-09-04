@@ -3,11 +3,11 @@ checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   function updateThemeColor() {
     const body = document.body;
     const isDarkTheme = body.classList.contains("dark-mode");
-    const themeColor = isDarkTheme ? "#1c1c1e" : "#f6f7f8"; // Ajuste as cores conforme necessário
+    const themeColor = isDarkTheme ? "#1c1c1e" : "#f6f7f8";
 
     let metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (!metaThemeColor) {
@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateThemeColor();
 
-  document.querySelector("header").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
+  checkbox.addEventListener("change", () => {
     updateThemeColor();
   });
 });
