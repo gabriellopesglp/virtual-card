@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateThemeColor();
 
   checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode");
     updateThemeColor();
   });
 });
