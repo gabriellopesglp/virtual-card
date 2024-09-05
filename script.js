@@ -14,7 +14,7 @@ function updateThemeColor() {
   }
   setTimeout(() => {
     metaThemeColor.content = themeColor;
-  }, 100);
+  }, 30);
 }
 
 checkbox.addEventListener("change", () => {
