@@ -5,14 +5,14 @@ function updateThemeColor() {
   const isDarkTheme = body.classList.contains("dark-mode");
   const themeColor = isDarkTheme ? "#1c1c1e" : "#f6f7f8";
 
+  
+  let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  if (!metaThemeColor) {
+    metaThemeColor = document.createElement("meta");
+    metaThemeColor.name = "theme-color";
+    document.head.appendChild(metaThemeColor);
+  }
   setTimeout(() => {
-    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (!metaThemeColor) {
-      metaThemeColor = document.createElement("meta");
-      metaThemeColor.name = "theme-color";
-      document.head.appendChild(metaThemeColor);
-    }
-
     metaThemeColor.content = themeColor;
   }, 300);
 }
